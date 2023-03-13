@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Runecape.Player
+namespace Runecape.Players
 {
     internal class Player
     {
@@ -12,13 +12,6 @@ namespace Runecape.Player
         public string name { get; set; }
         public int combatLevel { get; set; }
         public int[] skills { get; set; }
-        private int health { get; set; }
-        private int attack { get; set; }
-        private int strength { get; set; }
-        private int defence { get; set; }
-        private int magic { get; set; }
-        private int range { get; set; }
-        private int prayer { get; set; }
 
         public Player()
         {
@@ -36,9 +29,11 @@ namespace Runecape.Player
             };
             this.combatLevel = 0;
             
-    }
+        }
 
-        public Player(int id, string name, int[] skills)
+        public Player(int id, 
+                      string name, 
+                      int[] skills)
         {
             this.id = id;
             this.name = name;
